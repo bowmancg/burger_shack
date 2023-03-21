@@ -25,6 +25,7 @@ export class BurgerController extends BaseController {
         try {
             const burgerId = req.params.burgerId
             const burger = await burgerService.getBurgerById(burgerId)
+            console.log("burgerId", burgerId);
             return res.send(burger)
         } catch (error) {
             next(error)
